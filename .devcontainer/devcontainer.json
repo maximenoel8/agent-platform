@@ -14,7 +14,9 @@
     "AGENT_PLATFORM_ALLOW_SSH_AGENT": "${localEnv:AGENT_PLATFORM_ALLOW_SSH_AGENT:true}",
     "AGENT_PLATFORM_ALLOW_HOST_NETWORK": "${localEnv:AGENT_PLATFORM_ALLOW_HOST_NETWORK:true}",
     "NODE_OPTIONS": "--max-old-space-size=4096",
-    "POWERLEVEL9K_DISABLE_GITSTATUS": "true"
+    "POWERLEVEL9K_DISABLE_GITSTATUS": "true",
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
+    "ANTHROPIC_MODEL": "${localEnv:ANTHROPIC_MODEL}"
   },
   "runArgs": ["--cap-add=NET_ADMIN"],
   "customizations": {
@@ -36,6 +38,9 @@
           }
         }
       }
+    },
+    "jetbrains": {
+      "plugins": ["com.anthropic.claude-code"]
     }
   },
   "remoteUser": "node",
